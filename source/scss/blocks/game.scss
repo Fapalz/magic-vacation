@@ -117,3 +117,19 @@
   margin: 0 30px 30px;
   display: block;
 }
+
+.screen--game {
+  .chat__footer .form__field {
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-delay: 0.2s;
+  }
+}
+
+.screen--game:not(.screen--hidden) {
+  .chat__footer .form__field {
+    transform: scaleX(1);
+  }
+}
