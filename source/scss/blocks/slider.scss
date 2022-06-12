@@ -95,6 +95,11 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  transition-delay: 0.4s;
+  transform: translateX(100px);
+  opacity: 0;
+  transition-duration: 0s;
+  transition-property: transform, opacity;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -273,5 +278,26 @@
       height: 0.4rem;
       background-color: $c-light;
     }
+  }
+}
+
+.slider__item.swiper-slide-active,
+.slider__item.swiper-slide-next {
+  .slider__item-text {
+    transform: translateX(0);
+    opacity: 1;
+    transition-duration: 0.4s;
+  }
+}
+
+.slider__item.swiper-slide-active {
+  .slider__item-text {
+    transition-delay: 0.4s;
+  }
+}
+
+.slider__item.swiper-slide-next {
+  .slider__item-text {
+    transition-delay: 0.8s;
   }
 }
