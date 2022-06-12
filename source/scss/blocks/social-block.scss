@@ -10,8 +10,7 @@
     .social-block__list li {
       opacity: 1;
       transform: translateY(0);
-      transform: translateY(10px);
-      transition: all 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     .social-block__list li:first-child {
@@ -168,6 +167,7 @@
     margin-bottom: 0.5rem;
     opacity: 0;
     transition-delay: 0.3s;
+    transform: translateY(10px);
 
     @media (min-width: $stop-scaling) {
       margin-bottom: 5px;
